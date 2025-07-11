@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import React from 'react'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { 
   PlusIcon, 
@@ -11,21 +9,6 @@ import {
 } from '@heroicons/react/24/outline'
 
 const MainContent: React.FC = () => {
-  const [formData, setFormData] = useState({
-    accountNumber: '',
-    clientName: '',
-    requestedService: '',
-    priority: 'medium'
-  })
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
   return (
     <div className="flex-1 bg-white">
       {/* Header */}
